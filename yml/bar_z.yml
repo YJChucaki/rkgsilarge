@@ -1,0 +1,11 @@
+RegularGrid:
+    n: 3
+    γ: 6
+
+Ω:
+    type: ReproducingKernel{:Quadratic1D,:□,:CubicSpline,:Seg2}
+    𝓒:
+        tag: Ω
+    𝓖:
+        type: SegRG100
+        𝝭:  [𝝭,∂𝝭∂x,∂𝝭∂y,∂𝝭∂z]   

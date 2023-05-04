@@ -1,0 +1,30 @@
+
+[RegularGrid]
+n = 3
+"γ" = 5
+
+["Ω"]
+type="ReproducingKernel{:Quadratic1D,:□,:CubicSpline,:Seg2}"
+"𝓒".tag="Ω"
+"𝓒".type="SegRK3"
+"𝓖".type="SegRK3"
+"𝓖"."𝝭"="𝝭"
+
+["Ω̃"]
+type="ReproducingKernel{:Quadratic1D,:□,:CubicSpline,:Seg2}"
+"𝓒".tag="Ω"
+"𝓒".type="SegRK3"
+"𝓖".type="SegGI2"
+"𝓖"."𝝭"="∇̃₁𝝭"
+
+["Γᵗ"]
+type="ReproducingKernel{:Quadratic1D,:□,:CubicSpline,:Poi1}"
+"𝓒".tag="Γᵗ"
+"𝓖".type="PoiGI1"
+"𝓖"."𝝭"="𝝭"
+
+["Γᵍ"]
+type="ReproducingKernel{:Quadratic1D,:□,:CubicSpline,:Poi1}"
+"𝓒".tag="Γᵍ"
+"𝓖".type="PoiGI1"
+"𝓖"."𝝭"="𝝭"
